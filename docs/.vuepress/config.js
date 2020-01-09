@@ -1,6 +1,7 @@
 module.exports = {
     "title": "Timmy-Hong",
     "description": "Front-End Developer",
+    "base": '/timmy-hong/',
     "dest": "public",
     "head": [
         [
