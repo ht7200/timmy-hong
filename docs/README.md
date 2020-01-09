@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /barber.png
+heroImage: /hero.png
 heroImageStyle: {
   maxWidth: '600px',
   width: '100%',
