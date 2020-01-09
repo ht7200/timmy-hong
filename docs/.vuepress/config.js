@@ -35,33 +35,13 @@ module.exports = {
                 "icon": "reco-message",
                 "items": [{
                         "text": "NPM",
-                        "link": "https://www.npmjs.com/~reco_luan",
+                        "link": "https://www.npmjs.com/hongtun",
                         "icon": "reco-npm"
                     },
                     {
                         "text": "GitHub",
-                        "link": "https://github.com/recoluan",
+                        "link": "https://github.com/ht7200",
                         "icon": "reco-github"
-                    },
-                    {
-                        "text": "简书",
-                        "link": "https://www.jianshu.com/u/cd674a19515e",
-                        "icon": "reco-jianshu"
-                    },
-                    {
-                        "text": "CSDN",
-                        "link": "https://blog.csdn.net/recoluan",
-                        "icon": "reco-csdn"
-                    },
-                    {
-                        "text": "博客圆",
-                        "link": "https://www.cnblogs.com/luanhewei/",
-                        "icon": "reco-bokeyuan"
-                    },
-                    {
-                        "text": "WeChat",
-                        "link": "https://mp.weixin.qq.com/s/mXFqeUTegdvPliXknAAG_A",
-                        "icon": "reco-wechat"
                     }
                 ]
             }
@@ -78,18 +58,11 @@ module.exports = {
             }
         },
         "friendLink": [{
-                "title": "午后南杂",
-                "desc": "Enjoy when you can, and endure when you must.",
-                "email": "1156743527@qq.com",
-                "link": "https://www.recoluan.com"
-            },
-            {
-                "title": "vuepress-theme-reco",
-                "desc": "A simple and beautiful vuepress Blog & Doc theme.",
-                "avatar": "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
-                "link": "https://vuepress-theme-reco.recoluan.com"
-            }
-        ],
+            "title": "vuepress-theme-reco",
+            "desc": "A simple and beautiful vuepress Blog & Doc theme.",
+            "avatar": "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
+            "link": "https://vuepress-theme-reco.recoluan.com"
+        }],
         "logo": "/logo.png",
         "search": true,
         "searchMaxSuggestions": 10,
