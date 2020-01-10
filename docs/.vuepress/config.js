@@ -70,7 +70,7 @@ module.exports = {
         "sidebar": "auto",
         "lastUpdated": "Last Updated",
         "author": "Timmy",
-        "authorAvatar": "/avatar.jpg",
+        "authorAvatar": "/avatar.png",
         // "record": "xxxx",
         "startYear": "2017"
     },
