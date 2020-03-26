@@ -1,7 +1,7 @@
 module.exports = {
     "title": "Timmy-Hong",
     "description": "Front-End Developer",
-    "base": '/timmy-hong/',
+    "base": '/',
     "dest": "public",
     "head": [
         [
@@ -36,7 +36,7 @@ module.exports = {
                 "icon": "reco-message",
                 "items": [{
                         "text": "NPM",
-                        "link": "https://www.npmjs.com/hongtun",
+                        "link": "https://www.npmjs.com/~hongtun",
                         "icon": "reco-npm"
                     },
                     {
@@ -59,20 +59,20 @@ module.exports = {
             }
         },
         "friendLink": [{
-            "title": "vuepress-theme-reco",
-            "desc": "A simple and beautiful vuepress Blog & Doc theme.",
-            "avatar": "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
-            "link": "https://vuepress-theme-reco.recoluan.com"
+            "title":"David Guan",
+            "desc":"My dear friend David Guan",
+            "link":"https://davidguan.me/"
         }],
         "logo": "/logo.png",
         "search": true,
         "searchMaxSuggestions": 10,
-        "sidebar": "auto",
+        "mode": "light",
+        "sidebar": "light",
         "lastUpdated": "Last Updated",
         "author": "Timmy",
         "authorAvatar": "/avatar.png",
-        // "record": "xxxx",
-        "startYear": "2017"
+        "record": "皖ICP备20004244号",
+        "startYear": "2019"
     },
     "markdown": {
         "lineNumbers": true
