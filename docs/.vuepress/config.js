@@ -1,5 +1,5 @@
 module.exports = {
-    "title": "Timmy-Hong",
+    "title": "Timmy Hong",
     "description": "Front-End Developer",
     "base": '/',
     "dest": "public",
@@ -69,7 +69,7 @@ module.exports = {
         "mode": "light",
         "sidebar": "light",
         "lastUpdated": "Last Updated",
-        "author": "Timmy",
+        "author": "Timmy Hong",
         "authorAvatar": "/avatar.png",
         "record": "皖ICP备20004244号",
         "startYear": "2019"
