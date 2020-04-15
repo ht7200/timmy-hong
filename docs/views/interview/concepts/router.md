@@ -31,4 +31,59 @@ categories:
 * 使用```history.pushState()```来新增一个历史记录
 * 使用```history.repalceState()```来直接替换当前的历史记录
 
-### 3.前端路由守卫
+### 3.利用HASH写的一个简单路由
+
+``` html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="nav">
+    <a href="#/page1">page1</a>
+    <a href="#/page2">page2</a>
+    <a href="#/page3">page3</a>
+  </div>
+  <div id="container" style="width: 265px;height: 100px;background-color: blanchedalmond;margin-top: 20px;text-align: center;"></div>
+  <script>
+    let container = document.getElementById('container')
+
+    class HashRouter {
+      constructor() {
+        this.routers = {}
+        window.addEventListener('hashchange',this.load.bind(this),false)
+      }
+      register(hash, callback){
+        this.routers[hash] = callback
+      }
+      registerIndex(callback){
+        this.routers['index'] = callback
+      }
+      load(){
+        let hash = location.hash
+        const home = Object.keys(this.routers)[1]
+        let hander
+        if(!hash){
+          hander = this.routers[home]
+        }else{
+          hander = this.routers[hash]
+        }
+        hander.call(this)
+      }
+    }
+
+    let router = new HashRouter()
+    //注册其他视图回到函数
+    router.register('',()=> container.innerHTML = 'page1')
+    router.register('#/page1',()=> container.innerHTML = 'page1')
+    router.register('#/page2',()=> container.innerHTML = 'page2')
+    router.register('#/page3',()=> container.innerHTML = 'page3')
+    //加载视图
+    router.load()
+  </script>
+</body>
+</html>
+```
