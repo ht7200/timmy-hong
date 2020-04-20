@@ -76,7 +76,7 @@ categories:
     }
 
     let router = new HashRouter()
-    //注册其他视图回到函数
+    //注册各个视图回到函数
     router.register('',()=> container.innerHTML = 'page1')
     router.register('#/page1',()=> container.innerHTML = 'page1')
     router.register('#/page2',()=> container.innerHTML = 'page2')
