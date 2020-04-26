@@ -2,10 +2,9 @@
 title: Currying！柯里化！
 date: 2020-4-2
 tags:
- - router
- - Vue
-categories: 
  - JavaScript
+categories: 
+ - Interview
 ---
 
 ### 故事要从我在牛客网上刷到的一道题说起
