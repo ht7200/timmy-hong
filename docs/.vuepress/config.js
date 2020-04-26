@@ -20,6 +20,7 @@ module.exports = {
         ]
     ],
     "theme": "reco",
+    "displayAllHeaders": true, // 默认值：false
     "themeConfig": {
         "nav": [{
                 "text": "Home",
@@ -59,19 +60,20 @@ module.exports = {
             }
         },
         "friendLink": [{
-            "title":"David Guan",
-            "desc":"My dear friend David Guan",
-            "link":"https://davidguan.me/"
+            "title": "David Guan",
+            "desc": "My dear friend David Guan",
+            "link": "https://davidguan.me/"
         }],
         "logo": "/logo.png",
         "search": true,
         "searchMaxSuggestions": 10,
         "mode": "light",
-        "sidebar": "light",
+        "sidebar": "auto",
         "lastUpdated": "Last Updated",
         "author": "Timmy Hong",
         "authorAvatar": "/avatar.png",
         "record": "皖ICP备20004244号",
+        "recordLink": "http://www.beian.miit.gov.cn/",
         "startYear": "2019"
     },
     "markdown": {
