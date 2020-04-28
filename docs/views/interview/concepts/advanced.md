@@ -161,3 +161,31 @@ new Foo().getName(); // -> 2
 ```
 To `new Foo.getName()`,it executes `Foo.getName()` first and returns 1;   
 To `new Foo().getName()`,it executes `new Foo()` to create a expression,Then it found `getName()` in prototypal inheritance.So it returns 2.
+## instanceof
+The `instanceof` operator allows to check whether an object belongs to a certain class. It also takes inheritance into account.
+```js
+let arr = new Arrary();
+arr instanceof Arrary; // -> true
+
+let f = function(){};
+m = new f;
+m instanceof f;// -> true
+
+class Rabbit {}
+let rabbit = new Rabbit();
+rabbit instanceof Rabbit; => // true
+```
+Normally, `instanceof` examines the prototype chain for the check.We can try to create a instanceof function.
+```js
+function instanceof(left, right) {
+    let prototype = right.prototype
+    left = left.__proto__
+    while (true) {
+    	if (left === null)
+    		return false
+    	if (prototype === left)
+    		return true
+    	left = left.__proto__
+    }
+}
+```
