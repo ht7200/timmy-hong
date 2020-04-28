@@ -104,3 +104,60 @@ let oranges = "3";
 alert( apples + oranges ); // "23", the binary plus concatenates strings
 alert( Number(apples) + Number(oranges) ); // 5
 ```
+## Prototypal inheritance
+In JavaScript, objects have a special hidden property `[[Prototype]]`, that is either null or references another object. That object is called “a prototype”.   
+We can use obj.__proto__ to access it.   
+If we want to read a property of obj or call a method, and it doesn’t exist, then JavaScript tries to find it in the prototype.In programming, such thing is called “prototypal inheritance”.
+## New
+1. Create a new object 新生成了一个对象
+2. 链接到原型
+3. bind this
+4. return this new object 
+This is four steps when we run `new`.Then we can write a `new`:
+```js
+function create() {
+    // Create a new empty object
+    let obj = new Object()
+    // Get constructor function
+    let Con = [].shift.call(arguments)
+    // 链接到原型
+    obj.__proto__ = Con.prototype
+    // Bind this，execute constructor function
+    let result = Con.apply(obj, arguments)
+    // Make sure it retern a object
+    return typeof result === 'object' ? result : obj
+}
+```
+When a function is executed with new, it does the following steps:
+1. A new empty object is created and assigned to this.
+2. The function body executes. Usually it modifies this, adds new properties to it.
+3. The value of this is returned.
+does something like:
+```js
+function User(name) {
+  // this = {};  (implicitly)
+
+  // add properties to this
+  this.name = name;
+  this.isAdmin = false;
+
+  // return this;  (implicitly)
+}
+```
+For `new`,we have to care about operator precedence.
+```js
+function Foo() {
+    return this;
+}
+Foo.getName = function () {
+    console.log('1');
+};
+Foo.prototype.getName = function () {
+    console.log('2');
+};
+
+new Foo.getName();   // -> 1
+new Foo().getName(); // -> 2
+```
+To `new Foo.getName()`,it executes `Foo.getName()` first and returns 1;   
+To `new Foo().getName()`,it executes `new Foo()` to create a expression,Then it found `getName()` in prototypal inheritance.So it returns 2.
