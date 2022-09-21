@@ -9,7 +9,7 @@
     },
     "devDependencies": {
         "vuepress": "1.2.0",
-        "vuepress-theme-reco": "1.2.0-alpha.15"
+        "vuepress-theme-reco": "1.6.14"
     },
     "description": "Front-End Developer"
 }
